@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		370DAF4C194552EE008C8441 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DAF4B194552EE008C8441 /* AppDelegate.swift */; };
+		370DAF4E194552EE008C8441 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DAF4D194552EE008C8441 /* ViewController.swift */; };
+		370DAF51194552EE008C8441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DAF4F194552EE008C8441 /* Main.storyboard */; };
+		370DAF53194552EE008C8441 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370DAF52194552EE008C8441 /* Images.xcassets */; };
+		370DAF5F194552EE008C8441 /* Attitude_IndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DAF5E194552EE008C8441 /* Attitude_IndicatorTests.swift */; };
+		370DAF6B19455429008C8441 /* AttitudeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DAF6A19455429008C8441 /* AttitudeIndicatorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		370DAF59194552EE008C8441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 370DAF3E194552EE008C8441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 370DAF45194552EE008C8441;
+			remoteInfo = "Attitude Indicator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		370DAF46194552EE008C8441 /* Attitude Indicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Attitude Indicator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		370DAF4A194552EE008C8441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370DAF4B194552EE008C8441 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		370DAF4D194552EE008C8441 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		370DAF50194552EE008C8441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		370DAF52194552EE008C8441 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		370DAF58194552EE008C8441 /* Attitude IndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Attitude IndicatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		370DAF5D194552EE008C8441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		370DAF5E194552EE008C8441 /* Attitude_IndicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attitude_IndicatorTests.swift; sourceTree = "<group>"; };
+		370DAF6A19455429008C8441 /* AttitudeIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttitudeIndicatorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		370DAF43194552EE008C8441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370DAF55194552EE008C8441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		370DAF3D194552EE008C8441 = {
+			isa = PBXGroup;
+			children = (
+				370DAF48194552EE008C8441 /* Attitude Indicator */,
+				370DAF5B194552EE008C8441 /* Attitude IndicatorTests */,
+				370DAF47194552EE008C8441 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		370DAF47194552EE008C8441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370DAF46194552EE008C8441 /* Attitude Indicator.app */,
+				370DAF58194552EE008C8441 /* Attitude IndicatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		370DAF48194552EE008C8441 /* Attitude Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				370DAF4B194552EE008C8441 /* AppDelegate.swift */,
+				370DAF4D194552EE008C8441 /* ViewController.swift */,
+				370DAF4F194552EE008C8441 /* Main.storyboard */,
+				370DAF52194552EE008C8441 /* Images.xcassets */,
+				370DAF49194552EE008C8441 /* Supporting Files */,
+				370DAF6A19455429008C8441 /* AttitudeIndicatorView.swift */,
+			);
+			path = "Attitude Indicator";
+			sourceTree = "<group>";
+		};
+		370DAF49194552EE008C8441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				370DAF4A194552EE008C8441 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		370DAF5B194552EE008C8441 /* Attitude IndicatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				370DAF5E194552EE008C8441 /* Attitude_IndicatorTests.swift */,
+				370DAF5C194552EE008C8441 /* Supporting Files */,
+			);
+			path = "Attitude IndicatorTests";
+			sourceTree = "<group>";
+		};
+		370DAF5C194552EE008C8441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				370DAF5D194552EE008C8441 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		370DAF45194552EE008C8441 /* Attitude Indicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370DAF62194552EE008C8441 /* Build configuration list for PBXNativeTarget "Attitude Indicator" */;
+			buildPhases = (
+				370DAF42194552EE008C8441 /* Sources */,
+				370DAF43194552EE008C8441 /* Frameworks */,
+				370DAF44194552EE008C8441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Attitude Indicator";
+			productName = "Attitude Indicator";
+			productReference = 370DAF46194552EE008C8441 /* Attitude Indicator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		370DAF57194552EE008C8441 /* Attitude IndicatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370DAF65194552EE008C8441 /* Build configuration list for PBXNativeTarget "Attitude IndicatorTests" */;
+			buildPhases = (
+				370DAF54194552EE008C8441 /* Sources */,
+				370DAF55194552EE008C8441 /* Frameworks */,
+				370DAF56194552EE008C8441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370DAF5A194552EE008C8441 /* PBXTargetDependency */,
+			);
+			name = "Attitude IndicatorTests";
+			productName = "Attitude IndicatorTests";
+			productReference = 370DAF58194552EE008C8441 /* Attitude IndicatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		370DAF3E194552EE008C8441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Dan Schultz";
+				TargetAttributes = {
+					370DAF45194552EE008C8441 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 4RD39L9JLH;
+					};
+					370DAF57194552EE008C8441 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 370DAF45194552EE008C8441;
+					};
+				};
+			};
+			buildConfigurationList = 370DAF41194552EE008C8441 /* Build configuration list for PBXProject "Attitude Indicator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 370DAF3D194552EE008C8441;
+			productRefGroup = 370DAF47194552EE008C8441 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				370DAF45194552EE008C8441 /* Attitude Indicator */,
+				370DAF57194552EE008C8441 /* Attitude IndicatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		370DAF44194552EE008C8441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370DAF51194552EE008C8441 /* Main.storyboard in Resources */,
+				370DAF53194552EE008C8441 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370DAF56194552EE008C8441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370DAF42194552EE008C8441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370DAF4E194552EE008C8441 /* ViewController.swift in Sources */,
+				370DAF4C194552EE008C8441 /* AppDelegate.swift in Sources */,
+				370DAF6B19455429008C8441 /* AttitudeIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		370DAF54194552EE008C8441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370DAF5F194552EE008C8441 /* Attitude_IndicatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		370DAF5A194552EE008C8441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 370DAF45194552EE008C8441 /* Attitude Indicator */;
+			targetProxy = 370DAF59194552EE008C8441 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		370DAF4F194552EE008C8441 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				370DAF50194552EE008C8441 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		370DAF60194552EE008C8441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		370DAF61194552EE008C8441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		370DAF63194552EE008C8441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Attitude Indicator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		370DAF64194552EE008C8441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Attitude Indicator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		370DAF66194552EE008C8441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Attitude Indicator.app/Attitude Indicator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Attitude IndicatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		370DAF67194552EE008C8441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Attitude Indicator.app/Attitude Indicator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Attitude IndicatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		370DAF41194552EE008C8441 /* Build configuration list for PBXProject "Attitude Indicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370DAF60194552EE008C8441 /* Debug */,
+				370DAF61194552EE008C8441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370DAF62194552EE008C8441 /* Build configuration list for PBXNativeTarget "Attitude Indicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370DAF63194552EE008C8441 /* Debug */,
+				370DAF64194552EE008C8441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370DAF65194552EE008C8441 /* Build configuration list for PBXNativeTarget "Attitude IndicatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370DAF66194552EE008C8441 /* Debug */,
+				370DAF67194552EE008C8441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 370DAF3E194552EE008C8441 /* Project object */;
+}
