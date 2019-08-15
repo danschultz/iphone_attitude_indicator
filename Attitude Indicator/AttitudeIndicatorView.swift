@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UiKit
+import UIKit
 import QuartzCore
 
 class AttitudeIndicatorView : UIView {
@@ -17,21 +17,21 @@ class AttitudeIndicatorView : UIView {
     var _roll:CGFloat = 0.0
     
     var _worldLayer:CALayer = CALayer()
-    var _worldSize:CGSize = CGSizeMake(1600, 1600)
+    var _worldSize:CGSize = CGSize(width: 1600, height: 1600)
     
     var _miniPlane:CALayer = CALayer()
-    var _miniPlaneSize:CGSize = CGSizeMake(220, 8)
+    var _miniPlaneSize:CGSize = CGSize(width: 220, height: 8)
     
-    init(coder aDecoder: NSCoder!) {
-        super.init(coder: aDecoder)
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
         
-        _worldLayer.contents = drawWorldImage(_worldSize).CGImage
-        _worldLayer.contentsGravity = kCAGravityTopLeft
-        _worldLayer.frame = CGRectMake(0, 0, _worldSize.width, _worldSize.height)
+        _worldLayer.contents = drawWorldImage(size: _worldSize).cgImage
+        _worldLayer.contentsGravity = CALayerContentsGravity.topLeft
+        _worldLayer.frame = CGRect(x: 0, y: 0, width: _worldSize.width, height: _worldSize.height)
         layer.addSublayer(_worldLayer)
         
-        _miniPlane.contents = drawMiniPlane(_miniPlaneSize).CGImage
-        _miniPlane.contentsGravity = kCAGravityCenter
+        _miniPlane.contents = drawMiniPlane(size: _miniPlaneSize).cgImage
+        _miniPlane.contentsGravity = CALayerContentsGravity.center
         layer.addSublayer(_miniPlane)
     }
     
@@ -46,92 +46,97 @@ class AttitudeIndicatorView : UIView {
     }
     
     func drawWorldImage(size: CGSize) -> UIImage {
-        var skyColor = UIColor(red: 72.0 / 255.0, green: 121.0 / 255.0, blue: 202.0 / 255.0, alpha: 1.0)
-        var groundColor = UIColor(red: 90.0 / 255.0, green: 83.0 / 255.0, blue: 75.0 / 255.0, alpha: 1.0)
-        var horizon = size.height / 2
+        let skyColor = UIColor(red: 72.0 / 255.0, green: 121.0 / 255.0, blue: 202.0 / 255.0, alpha: 1.0)
+        let groundColor = UIColor(red: 90.0 / 255.0, green: 83.0 / 255.0, blue: 75.0 / 255.0, alpha: 1.0)
+        let horizon = size.height / 2
         
         UIGraphicsBeginImageContext(size)
-        var context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()
         
         // Draw the sky
         skyColor.setFill()
-        CGContextAddRect(context, CGRectMake(0, 0, size.width, horizon))
-        CGContextFillPath(context)
+        context!.addRect(CGRect(x: 0, y: 0, width: size.width, height: horizon))
+        context!.fillPath()
         
         // Draw the ground
-        println(horizon)
-        println(size.height / 2)
+        //println(horizon)
+        //println(size.height / 2)
         groundColor.setFill()
-        CGContextAddRect(context, CGRectMake(0, horizon, size.width, size.height / 2))
-        CGContextFillPath(context)
+        context!.addRect(CGRect(x: 0, y: horizon, width: size.width, height: size.height / 2))
+        context!.fillPath()
         
         // Draw the horizon line
-        CGContextSetLineWidth(context, 3.0)
-        CGContextSetStrokeColorWithColor(context, UIColor.whiteColor().CGColor)
-        CGContextMoveToPoint(context, 0, horizon)
-        CGContextAddLineToPoint(context, size.width, horizon)
-        CGContextStrokePath(context)
+        context!.setLineWidth(3.0)
+        context!.setStrokeColor(UIColor.white.cgColor)
+        context!.move(to: CGPoint(x: 0,y: horizon))
+        context!.addLine(to: CGPoint(x: size.width, y: horizon))
+        context!.strokePath()
         
         // Draw 10 degree marks above the horizon
-        CGContextSetLineWidth(context, 1.0)
+        context!.setLineWidth(1.0)
         for index in 1...6 {
-            var y = horizon - CGFloat(CGFloat(index) * 10.0 * degreeDistance)
-            CGContextMoveToPoint(context, size.width / 2 - 40, y)
-            CGContextAddLineToPoint(context, size.width / 2 + 40, y)
+            let y = horizon - CGFloat(CGFloat(index) * 10.0 * degreeDistance)
+            context!.move(to: CGPoint(x: size.width / 2 - 40,y: y))
+            context!.addLine(to: CGPoint(x: size.width / 2 + 40, y: y))
+            
         }
         
         // Draw 10 degree marks below the horizon
         for index in 1...6 {
-            var y = horizon + CGFloat(CGFloat(index) * 10 * degreeDistance)
-            CGContextMoveToPoint(context, size.width / 2 - 40, y)
-            CGContextAddLineToPoint(context, size.width / 2 + 40, y)
+            let y = horizon + CGFloat(CGFloat(index) * 10 * degreeDistance)
+            context!.move(to: CGPoint(x: size.width / 2 - 40,y: y))
+            context!.addLine(to: CGPoint(x: size.width / 2 + 40, y: y))
+            
         }
         
-        CGContextStrokePath(context)
+        context!.strokePath()
         
-        var image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
     func drawMiniPlane(size: CGSize) -> UIImage {
-        var wingColor = UIColor(red: 255.0 / 255.0, green: 253.0 / 255.0, blue: 93.0 / 255.0, alpha: 1.0)
+        let wingColor = UIColor(red: 255.0 / 255.0, green: 253.0 / 255.0, blue: 93.0 / 255.0, alpha: 1.0)
         
         UIGraphicsBeginImageContext(size)
-        var context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()
         
         wingColor.setStroke()
-        CGContextSetLineWidth(context, 8)
+        context!.setLineWidth(8)
         
-        CGContextMoveToPoint(context, 0, size.height / 2)
-        CGContextAddLineToPoint(context, size.width / 2 - 45, size.height / 2)
+        context!.move(to: CGPoint(x: 0,y: size.height / 2))
+        context!.addLine(to: CGPoint(x: size.width / 2 - 45, y: size.height / 2))
         
-        CGContextMoveToPoint(context, size.width / 2 + 45, size.height / 2)
-        CGContextAddLineToPoint(context, size.width, size.height / 2)
+        context!.move(to: CGPoint(x: size.width / 2 + 45,y: size.height / 2))
+        context!.addLine(to: CGPoint(x: size.width, y: size.height / 2))
         
-        CGContextStrokePath(context)
         
-        var centerDotArea = CGRectMake(size.width / 2 - 4, 0, 8, 8)
+        context!.strokePath()
+        
+        let centerDotArea = CGRect(x: size.width / 2 - 4, y: 0, width: 8, height: 8)
         wingColor.setFill()
-        CGContextFillEllipseInRect(context, centerDotArea)
+        context!.fillEllipse(in: centerDotArea)
         
-        var image = UIGraphicsGetImageFromCurrentImageContext()
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        return image
+        return image!
     }
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         _miniPlane.frame = rect
         
         // Transform the world layer
-        var worldCenter = CGPointMake(rect.width / 2 - _worldSize.width / 2, rect.height / 2 - _worldSize.height / 2)
-        var worldOffset = CGPointMake(rect.width / 2, rect.height / 2 + _pitch * degreeDistance)
+        let worldCenter = CGPoint(x: rect.width / 2 - _worldSize.width / 2, y: rect.height / 2 - _worldSize.height / 2)
+        _ = CGPoint(x: rect.width / 2, y: rect.height / 2 + _pitch * degreeDistance)
         
-        var transform = CGAffineTransformMakeTranslation(worldCenter.x, worldCenter.y)
-        transform = CGAffineTransformRotate(transform, _roll / 180.0 * CGFloat(M_PI))
-        transform = CGAffineTransformTranslate(transform, 0, _pitch * degreeDistance)
+        var transform = CGAffineTransform(translationX: worldCenter.x, y: worldCenter.y)
+        
+        transform = transform.rotated(by: CGFloat(_roll / 180.0) * CGFloat.pi)
+        transform = transform.translatedBy(x: 0, y: CGFloat(_pitch * degreeDistance))
+        
         
         _worldLayer.setAffineTransform(transform)
     }
